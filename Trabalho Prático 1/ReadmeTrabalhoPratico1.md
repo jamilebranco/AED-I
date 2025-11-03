@@ -20,7 +20,6 @@ Input: flowerbed = [1,0,0,0,1], n = 2
 Output: false
 
  
- 
 Constraints:
 
     1 <= flowerbed.length <= 2 * 104
