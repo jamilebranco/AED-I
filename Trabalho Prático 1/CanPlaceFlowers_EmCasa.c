@@ -1,25 +1,22 @@
 /*
 ====================
-CanPlaceFlowers
-Verifica se é possível plantar 'n' flores no flowerbed sem violar a regra de flores adjacentes
+605. CanPlaceFlowers
+Verifica se é possível plantar n flores no flowerbed sem quebrar a regra de adjacentes
 ====================
 */
+
 bool CanPlaceFlowers( int *flowerbed, int flowerbedSize, int n )
 {
 	// percorre cada espaço do flowerbed enquanto ainda houver flores para plantar
 	for ( int i = 0; i < flowerbedSize && n > 0; i++ )
 	{
-		// verifica se é possível plantar na posição i:
-		// primeira posição: array com 1 elemento ou próximo espaço vazio
-		// última posição: espaço anterior vazio
-		// posições internas: ambos os vizinhos vazios
-		// além disso, o próprio espaço deve estar vazio
+		// verifica se é possível plantar na posição i
 		if ( ( ( i == 0 && ( flowerbedSize == 1 || flowerbed[1] == 0 ) ) ||
 			   ( i == flowerbedSize - 1 && flowerbed[flowerbedSize - 2] == 0 ) ||
 			   ( i > 0 && i < flowerbedSize - 1 && flowerbed[i - 1] == 0 && flowerbed[i + 1] == 0 ) )
 			 && flowerbed[i] == 0 )
 		{
-			flowerbed[i] = 1;	// planta a flor
+			flowerbed[i] = 1;   // planta a flor
 			n--;				// decrementa apenas se plantar
 		}
 	}
