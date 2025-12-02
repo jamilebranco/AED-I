@@ -1,7 +1,6 @@
 /*
 ====================
 143. Reorder List
-Verifica se é possível plantar n flores no flowerbed sem quebrar a regra de adjacentes
 ====================
 */
 
